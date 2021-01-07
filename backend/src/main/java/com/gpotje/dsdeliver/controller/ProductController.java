@@ -12,7 +12,7 @@ import com.gpotje.dsdeliver.DTO.ProductDTO;
 import com.gpotje.dsdeliver.service.ProductService;
 
 @RestController
-@RequestMapping(value ="/product")
+@RequestMapping(value ="/products")
 public class ProductController {
 	
 	@Autowired
