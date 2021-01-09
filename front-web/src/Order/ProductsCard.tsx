@@ -23,7 +23,7 @@ function ProductsCard({product}:Props){
                 <img src={product.imageUri} className="order-card-image"
                 alt={product.name}/>
                 <h3 className="order-card-price">
-               R$  {product.price}
+                R$  {product.price}
                 </h3>
                 <div className="order-card-description">
                 <h3>
