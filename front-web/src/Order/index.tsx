@@ -22,13 +22,13 @@ function Orders(){
         },0);
 
         
-
+/*
         useEffect(()=>{
             fetchProducts().
             then(response => setProducts(response.data)).
             catch(error => "deu ruim" )    
         },[]);
-
+*/
         const handleSelectProduct = (product: Product) => {
             const isAlreadySelected  = checkIsSelected(selectedproducts,product);
           
