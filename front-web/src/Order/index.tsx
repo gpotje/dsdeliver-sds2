@@ -1,8 +1,8 @@
-import { useEffect, useState } from 'react';
+import {  useEffect, useState } from 'react';
 
 import { toast } from 'react-toastify';
 import Footer from '../Footer';
-import { fetchProducts, saveOrder} from './api';
+import {  fetchProducts, saveOrder} from './api';
 import { checkIsSelected } from './Helpes';
 import OrderLocation from './OrderLocation';
 import OrderSumary from './OrderSumary';
@@ -14,7 +14,7 @@ import { OrderLocationData, Product } from './types';
 
 
 function Orders(){
-        const [product,setProducts] = useState<Product[]>([]);
+        const [products,setProducts] = useState<Product[]>([]);
         const [selectedproducts,setselectedProducts] = useState<Product[]>([]);
         const [orderLocation,setOrderLocation] = useState<OrderLocationData>();
         const totalPrice = selectedproducts.reduce((sum,item)=>{
@@ -22,13 +22,13 @@ function Orders(){
         },0);
 
         
-/*
+
         useEffect(()=>{
-            fetchProducts().
-            then(response => setProducts(response.data)).
-            catch(error => "deu ruim" )    
+            fetchProducts()
+            .then(response => setProducts(response.data))
+            .catch(error => console.log(error) )    
         },[]);
-*/
+
         const handleSelectProduct = (product: Product) => {
             const isAlreadySelected  = checkIsSelected(selectedproducts,product);
           
@@ -64,7 +64,7 @@ function Orders(){
                 <div className="orders-container">
                    <StepsHeader/>
                    <ProductsList 
-                   products={product}
+                   products={products}
                    onSelectProduct={handleSelectProduct}
                    selectedProducts={selectedproducts}
                    />
