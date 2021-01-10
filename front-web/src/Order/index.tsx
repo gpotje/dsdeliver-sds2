@@ -26,7 +26,7 @@ function Orders(){
         useEffect(()=>{
             fetchProducts().
             then(response => setProducts(response.data)).
-            catch(error =>console.log(error))    
+            catch(error => "deu ruim" )    
         },[]);
 
         const handleSelectProduct = (product: Product) => {
