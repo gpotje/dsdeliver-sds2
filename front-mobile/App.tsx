@@ -6,6 +6,7 @@ import { StyleSheet, Text, View } from 'react-native';
 import Home from './src/Home';
 
 import Header from './src/Header';
+import Routes from './src/Routes';
 
 export default function App() {
 
@@ -22,8 +23,7 @@ export default function App() {
   return (
     <View style={styles.container}>
      <StatusBar style="auto" />
-      <Header />
-      <Home />
+     <Routes />
   
     </View>
   );
